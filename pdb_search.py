@@ -5,12 +5,12 @@ plik = open(nazwa,'r')
 app = open('informacje.txt','w+')
 for linijka in plik:
     if linijka.startswith('EXPDTA'):
-        print linijka
+        print (linijka)
         app.write(linijka[10:])
 plik.seek(0)
 for linijka in plik:
     if linijka[11:21] == 'RESOLUTION':
-        print linijka
+        print (linijka)
         app.write('rozdzielczosc: ')
         app.write(linijka[26:41])
         app.write('\n')
@@ -20,7 +20,7 @@ for linijka in plik:
     if linijka.startswith('HELIX'):
         d += 1
         app.write(linijka[74:77])
-        print linijka[74:77]
+        print (linijka[74:77])
 print ('ilosc: ', d)
 app.write('\n')
 app.write('ilosc: ')
