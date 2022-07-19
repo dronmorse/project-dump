@@ -10,12 +10,11 @@ fasta = open('myszka.fasta','r')
 
 for linijka in fasta:
     if linijka.startswith('>'):
-    	tytul += linijka[1:].strip()
+        tytul += linijka[1:].strip()
     else:
-    	kod += linijka.strip()
-    	
-# zamykanie fasty  	
+        kod += linijka.strip()
 
+# zamykanie fasty  	
 fasta.close()
 
 # tworzenie pliku o nazwie z wczesniej zapisanego tytul, zapisanie w nim kod, zamkniecie
@@ -44,13 +43,13 @@ trans = ''
 slownik ={'A':'T', 'C':'G', 'G':'C', 'T':'A'}
 
 for i in ramka:
-	trans += slownik[i]
+    trans += slownik[i]
 
 # ddlugosc DNA po transkrypcji
 
 liczba = 0
 for i in trans:
-	liczba += 1
+    liczba += 1
 
 # policzenie procentowych udzialoww kazdej zasady
 
